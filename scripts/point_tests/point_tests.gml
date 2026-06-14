@@ -39,7 +39,7 @@ function point_rectangle_test(px, py, rx, ry, w, h) {
 }
 
 function point_polygon_test(px, py, polygon) {
-    var collision = false;
+	var collision = false;
 
     var i = 0;
     repeat (POLYGON_EDGES) {

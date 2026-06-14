@@ -13,3 +13,21 @@ function line_rectangle_test(x1, y1, x2, y2, rx, ry, w, h) {
 	
 	return (left or right or top or bottom);
 }
+
+
+function line_polygon_test(x1, y1, x2, y2, polygon) {
+	if (point_polygon_test(x1, y1, polygon) or
+		point_polygon_test(x2, y2, polygon)) return true;
+
+    var i = 0;
+    repeat (POLYGON_EDGES) {
+        var point_a = POLYGON_POINTS[i++];
+        var point_b = POLYGON_POINTS[i % POLYGON_EDGES];
+		
+		if (line_line_test(	x1, y1, x2, y2,
+							point_a[POINT.X], point_a[POINT.Y],
+							point_b[POINT.X], point_b[POINT.Y])) return true;
+    }
+
+    return false;
+}

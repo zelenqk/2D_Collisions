@@ -23,22 +23,20 @@ function Circle(tx, ty, radius, mask = 0){
 
 //collisions
 function circle_in_point(circle, point) {
-    var dx = POINT_X - CIRCLE_X;
-    var dy = POINT_Y - CIRCLE_Y;
-	
-	var collision = (dx * dx + dy * dy) <= (CIRCLE_RADIUS * CIRCLE_RADIUS);
-	
-    return collision;
+	return point_circle_test(POINT_X, POINT_Y, CIRCLE_X, CIRCLE_Y, CIRCLE_RADIUS);
 }
 
-function circle_in_circle(a, b) {		//this one makes me feel smart :)))
-    var dx = a[CIRCLE.X] - b[CIRCLE.X];	//basically if the distance between the two circles
-    var dy = a[CIRCLE.Y] - b[CIRCLE.Y];	//is smaller than the sum of their radii it means they are colliding
-
-    var sum = a[CIRCLE.RADIUS] + b[CIRCLE.RADIUS];
-    return (dx * dx + dy * dy) <= (sum * sum);
+function circle_in_circle(a, b) {
+	return circle_circle_test(a[CIRCLE.X], a[CIRCLE.Y], a[CIRCLE.RADIUS], b[CIRCLE.X], b[CIRCLE.Y], b[CIRCLE.RADIUS])
 }
 
 function circle_in_line(circle, line) {
-	circle_line_test(CIRCLE_X, CIRCLE_Y, CIRCLE_RADIUS, LINE_X1, LINE_Y1, LINE_X2, LINE_Y2);
+	return circle_line_test(CIRCLE_X, CIRCLE_Y, CIRCLE_RADIUS, LINE_X1, LINE_Y1, LINE_X2, LINE_Y2);
+}
+
+function circle_in_rectangle(circle, rectangle) {
+	return circle_rectangle_test(CIRCLE_X, CIRCLE_Y, CIRCLE_RADIUS, RECTANGLE_X, RECTANGLE_Y, RECTANGLE_WIDTH, RECTANGLE_HEIGHT);
+}
+function circle_in_polygon(circle, polygon) {
+	return circle_polygon_test(CIRCLE_X, CIRCLE_Y, CIRCLE_RADIUS, polygon);
 }

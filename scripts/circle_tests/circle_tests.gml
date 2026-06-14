@@ -47,3 +47,18 @@ function circle_polygon_test(cx, cy, radius, polygon) {
 
     return false;
 }
+
+function circle_rectangle_test(cx, cy, radius, rx, ry, w, h) {
+	var test_x = rx;
+	if (cx > rx + w) test_x = rx + w;
+	
+	var test_y = ry;
+	if (cy > ry + h) test_y = ry + h;
+	
+	var dist_x = cx - test_x;
+	var dist_y = cy - test_y;
+
+	var distance = sqrt((dist_x * dist_x) + (dist_y * dist_y));
+	
+	return (distance <= radius);
+}

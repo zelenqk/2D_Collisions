@@ -26,3 +26,22 @@ function Rectangle(tx, ty, width, height, mask = 0){
 function rectangle_in_point(rectangle, point) {
 	return point_rectangle_test(POINT_X, POINT_Y, RECTANGLE_X, RECTANGLE_Y, RECTANGLE_WIDTH, RECTANGLE_HEIGHT);
 }
+
+function rectangle_in_circle(rectangle, circle) {
+	return circle_rectangle_test(CIRCLE_X, CIRCLE_Y, CIRCLE_RADIUS, RECTANGLE_X, RECTANGLE_Y, RECTANGLE_WIDTH, RECTANGLE_HEIGHT);
+}
+
+function rectangle_in_line(rectangle, line) {
+	return line_rectangle_test(LINE_X1, LINE_Y1, LINE_X2, LINE_Y2, RECTANGLE_X, RECTANGLE_Y, RECTANGLE_WIDTH, RECTANGLE_HEIGHT);	
+}
+
+function rectangle_in_rectangle(a, b) {
+	return rectangle_rectangle_test(
+		a[RECTANGLE.X], a[RECTANGLE.Y], a[RECTANGLE.WIDTH], a[RECTANGLE.HEIGHT],
+		b[RECTANGLE.X], b[RECTANGLE.Y], b[RECTANGLE.WIDTH], b[RECTANGLE.HEIGHT]
+	)
+}
+
+function rectangle_in_polygon(rectangle, polygon) {
+	return rectangle_polygon_test(RECTANGLE_X, RECTANGLE_Y, RECTANGLE_WIDTH, RECTANGLE_HEIGHT, polygon);	
+}
