@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Polygon",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Polygon",
+  "parent":{
+    "name":"objects",
+    "path":"folders/Collisions/objects.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

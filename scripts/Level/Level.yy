@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Level",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Level",
+  "parent":{
+    "name":"Collisions",
+    "path":"folders/Collisions.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
