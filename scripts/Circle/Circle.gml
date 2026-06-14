@@ -32,15 +32,13 @@ function circle_in_point(circle, point) {
 }
 
 function circle_in_circle(a, b) {		//this one makes me feel smart :)))
-    var dx = a[CIRCLE.X] - b[CIRCLE.X];
-    var dy = a[CIRCLE.Y] - b[CIRCLE.Y];
+    var dx = a[CIRCLE.X] - b[CIRCLE.X];	//basically if the distance between the two circles
+    var dy = a[CIRCLE.Y] - b[CIRCLE.Y];	//is smaller than the sum of their radii it means they are colliding
 
-    var r = a[CIRCLE.RADIUS] + b[CIRCLE.RADIUS];
-    return (dx * dx + dy * dy) <= (r * r);
+    var sum = a[CIRCLE.RADIUS] + b[CIRCLE.RADIUS];
+    return (dx * dx + dy * dy) <= (sum * sum);
 }
 
 function circle_in_line(circle, line) {
-	var a = point_circle_test(line[LINE.X1], line[LINE.Y1], CIRCLE_X, CIRCLE_Y, CIRCLE_RADIUS);
-	var b = point_circle_test(line[LINE.X2], line[LINE.Y2], CIRCLE_X, CIRCLE_Y, CIRCLE_RADIUS);
-	if (a or b) return true;
+	circle_line_test(CIRCLE_X, CIRCLE_Y, CIRCLE_RADIUS, LINE_X1, LINE_Y1, LINE_X2, LINE_Y2);
 }

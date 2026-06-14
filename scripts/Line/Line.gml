@@ -24,7 +24,7 @@ function Line(x1, y1, x2, y2, mask = 0){
 }
 
 //collision functions
-function line_line_test(a, b){
+function line_in_line(a, b){
 	var x1 = a[LINE.X1];
 	var x2 = a[LINE.X2];
 	var x3 = b[LINE.X1];
@@ -46,12 +46,11 @@ function line_line_test(a, b){
 	return [collision, intersection_x, intersection_y];
 }
 
-function line_polygon_test(a, b) {
-	var isLine = (a[OBJECT_TYPE.TYPE] == OBJECT_TYPE.LINE);
-	
-	var line = isLine ? a : b;
-	var polygon = isLine ? b : a;
-	
+function line_in_polygon(line, polygon){
+		
+}
+
+function line_polygon_test(line, polygon) {
 	var x1 = line[LINE.X1];
 	var x2 = line[LINE.X2];
 	
@@ -62,7 +61,8 @@ function line_polygon_test(a, b) {
 	
 	var i = 0;
 	repeat (POLYGON_EDGES){
-		var edge = POLYGON_EDGE_LIST[i++];
+		var a = POLYGON_POINTS[i++];
+		var b = POLYGON_POINTS[i % POLYGON_EDGES];
 		
 		var x3 = edge[LINE.X1];
 		var x4 = edge[LINE.X2];

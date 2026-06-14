@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"Circle",
   "parent":{
-    "name":"objects",
-    "path":"folders/Collisions/objects.yy",
+    "name":"primitives",
+    "path":"folders/Collisions/primitives.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

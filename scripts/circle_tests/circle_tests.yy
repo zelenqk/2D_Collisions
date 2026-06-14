@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"point_tests",
+  "%Name":"circle_tests",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"point_tests",
+  "name":"circle_tests",
   "parent":{
     "name":"util",
     "path":"folders/Collisions/primitives/util.yy",
