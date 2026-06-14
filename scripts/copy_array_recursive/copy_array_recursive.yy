@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"copy_array_recursive",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"copy_array_recursive",
+  "parent":{
+    "name":"util",
+    "path":"folders/Collisions/util.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

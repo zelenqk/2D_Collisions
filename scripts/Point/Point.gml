@@ -39,3 +39,7 @@ function point_in_rectangle(point, rectangle) {
 function point_in_polygon(point, polygon) {
 	return point_polygon_test(POINT_X, POINT_Y, polygon);	
 }
+
+function point_in_dynamic(point, dynamic) {
+	return point_dynamic_test	
+}

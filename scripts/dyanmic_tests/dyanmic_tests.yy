@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"dyanmic_tests",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"dyanmic_tests",
+  "parent":{
+    "name":"util",
+    "path":"folders/Collisions/primitives/util.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

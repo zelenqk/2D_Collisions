@@ -11,3 +11,5 @@ polygon = Polygon([
 ]);
 
 result = false;
+
+world = List(polygon);
