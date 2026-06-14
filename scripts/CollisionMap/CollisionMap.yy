@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"Level",
+  "%Name":"CollisionMap",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"Level",
+  "name":"CollisionMap",
   "parent":{
     "name":"Collisions",
     "path":"folders/Collisions.yy",

@@ -1,5 +1,6 @@
 the guide that was used [https://www.jeffreythompson.org/collision-detection]
-to create this system uses "Creative Commons Attribution, Non-Commercial, Share-Alike license"
+to create this system uses the
+"Creative Commons Attribution, Non-Commercial, Share-Alike license"
 
 [REFERENCE] https://www.jeffreythompson.org/collision-detection/license.php [REFERENCE]
 

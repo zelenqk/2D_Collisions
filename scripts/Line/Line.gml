@@ -1,4 +1,4 @@
-enum LINE { TYPE, MATRIX, MASK, X1, Y1, X2, Y2, LENGTH };
+enum LINE { TYPE, MASK, X1, Y1, X2, Y2, LENGTH };
 
 //buid the line
 #macro LINE_BEGIN var line = array_create(LINE.LENGTH, OBJECT_TYPE.LINE)

@@ -2,6 +2,10 @@
 #macro point_triangle_precision 0.001
 #macro point_line_precision 0.1
 
+function point_point_test(ax, ay, bx, by) {
+	return (ax == bx and ay == by);
+}
+
 function point_circle_test(px, py, cx, cy, radius) {
     var dx = px - cx;
     var dy = py - cy;

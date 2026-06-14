@@ -1,4 +1,4 @@
-enum POINT { TYPE, MASK , X, Y, LENGTH };
+enum POINT { TYPE, MASK, X, Y, LENGTH };
 
 #macro POINT_BEGIN var point = array_create(POINT.LENGTH, OBJECT_TYPE.POINT)
 
@@ -41,5 +41,5 @@ function point_in_polygon(point, polygon) {
 }
 
 function point_in_dynamic(point, dynamic) {
-	return point_dynamic_test	
+	return point_dynamic_test(POINT_X, POINT_Y, dynamic)	
 }

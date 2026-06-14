@@ -10,6 +10,17 @@ polygon = Polygon([
     Point(room_width / 2 + 50, room_height / 2 - 40)
 ]);
 
+dynamic = Dynamic(0, 0, Polygon([
+		Point(+ 60, - 10),
+		Point(+ 40, + 50),
+		Point(- 10, + 70),
+		Point(- 60, + 20),
+		Point(- 50, - 40),
+		Point(- 10, - 70),
+		Point(+ 50, - 40)
+	])
+);
+
 result = false;
 
-world = List(polygon);
+world = List([polygon]);

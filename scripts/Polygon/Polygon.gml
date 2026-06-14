@@ -67,5 +67,8 @@ function polygon_polygon_test(a, b) {
         var point_b = a[POLYGON.POINTS][i % POLYGON_EDGES]
 		
 		var collision = line_polygon_test(point_a[POINT.X], point_a[POINT.Y], point_b[POINT.X], point_b[POINT.Y], b);
+		if (collision) return true;
 	}
+	
+	return false;
 }

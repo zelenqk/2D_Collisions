@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"debug_draw_object",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"debug_draw_object",
+  "parent":{
+    "name":"util",
+    "path":"folders/Collisions/util.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
