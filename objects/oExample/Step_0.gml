@@ -1,4 +1,4 @@
-lineA[LINE.X2] = mouse_x;
-lineA[LINE.Y2] = mouse_y;
+point[POINT.X] = mouse_x;
+point[POINT.Y] = mouse_y;
 
-result = collision_test(lineA, lineB);
+result = collision_test(point, polygon);

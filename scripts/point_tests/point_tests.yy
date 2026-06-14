@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"point_tests",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"point_tests",
+  "parent":{
+    "name":"tests",
+    "path":"folders/Collisions/objects/tests.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

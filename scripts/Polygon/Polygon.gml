@@ -1,10 +1,12 @@
-enum POLYGON { TYPE, MASK, EDGES, EDGE_LIST };
+enum POLYGON { TYPE, MASK, EDGES, POINTS, CENTER_X, CENTER_Y, LENGTH };
 
 //buid the rectangle
-#macro POLYGON_BEGIN var polygon = array_create(LINE.LENGTH, OBJECT_TYPE.POLYGON);
+#macro POLYGON_BEGIN	var polygon = array_create(POLYGON.LENGTH, OBJECT_TYPE.POLYGON)
 #macro POLYGON_MASK			polygon[POLYGON.MASK]
 #macro POLYGON_EDGES		polygon[POLYGON.EDGES]
-#macro POLYGON_EDGE_LIST	polygon[POLYGON.EDGE_LIST]
+#macro POLYGON_POINTS		polygon[POLYGON.POINTS]
+#macro POLYGON_CENTER_X		polygon[POLYGON.CENTER_X]
+#macro POLYGON_CENTER_Y		polygon[POLYGON.CENTER_Y]
 
 #macro POLYGON_END return polygon
 
@@ -12,20 +14,25 @@ function Polygon(points, mask = 0){
 	POLYGON_BEGIN;
 	POLYGON_MASK  = mask;
 	
-	POLYGON_EDGE_LIST = [];
+	POLYGON_EDGES = array_length(points);
+	POLYGON_POINTS = points;
 	
+	//find center
 	var i = 0;
-	var edge = 0;
-	var length = array_length(points);
-
-	repeat (array_length(points) - 1) {
-		var point_a = points[i++ % length];
-		var point_b = points[i++ % length];
+	var width = 0;
+	var height = 0;
 	
-		POLYGON_EDGE_LIST[edge++] = Line(point_a[POINT.X], point_a[POINT.Y], point_b[POINT.X], point_b[POINT.Y]);
+	repeat (POLYGON_EDGES) {
+		var point_a = POLYGON_POINTS[i++];
+		var point_b = POLYGON_POINTS[i % POLYGON_EDGES];
+		
+		width += point_a[POINT.X];
+		height += point_a[POINT.Y];
 	}
 	
-	POLYGON_EDGES = edge;
+	POLYGON_CENTER_X = width / POLYGON_EDGES;
+	POLYGON_CENTER_Y = height / POLYGON_EDGES;
 	
+	//finish
 	POLYGON_END;
 }

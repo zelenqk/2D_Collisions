@@ -1,6 +1,9 @@
-draw_text(0, 0, result);
+draw_circle(point[POINT.X], point[POINT.Y], 12, result);
 
-draw_line(lineA[LINE.X1], lineA[LINE.Y1], lineA[LINE.X2], lineA[LINE.Y2]);
-draw_line(lineB[LINE.X1], lineB[LINE.Y1], lineB[LINE.X2], lineB[LINE.Y2]);
-
-if (result[0]) draw_circle(result[1], result[2], 32, true);	
+var i = 0;
+repeat(POLYGON_EDGES){
+	var point_a = POLYGON_POINTS[i++];
+	var point_b = POLYGON_POINTS[i % POLYGON_EDGES];
+	
+	draw_line(point_a[POINT.X], point_a[POINT.Y], point_b[POINT.X], point_b[POINT.Y]);
+}

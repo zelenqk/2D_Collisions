@@ -1,0 +1,23 @@
+the guide that was used [https://www.jeffreythompson.org/collision-detection]
+to create this system uses "Creative Commons Attribution, Non-Commercial, Share-Alike license"
+
+[REFERENCE] https://www.jeffreythompson.org/collision-detection/license.php [REFERENCE]
+
+#1 ================================================
+You’re welcome to use this book and the examples to make great stuff,
+but please cite this book somewhere in your project or its documentation.
+
+#2 ================================================
+You can only use the book’s text and/or code vertbatim for non-commercial projects.
+
+That means you can remix or make your own version of the book,
+and you can fork and create new libraries based on the code here,
+so long as they are not commercial projects (ie publishing a book with a publisher).
+
+I’m very happy to talk options if you have a paid gig
+and you’d like to use some of the materials.
+
+#3 ================================================
+If you do make a project that forks or remixes this book or code-base,
+it must be released under this same license or a looser one. Pay it forward!
+
