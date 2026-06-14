@@ -1,4 +1,4 @@
-#2D Collision Utils (GML)
+# 2D Collision Utils (GML)
 
 Based on the collision detection guide by Jeffrey Thompson:
 https://www.jeffreythompson.org/collision-detection
